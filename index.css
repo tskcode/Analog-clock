@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(60, 61, 62);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+
+}
+
+.analog{
+    width: 500px;
+    height: 500px;
+    background-image: url(11e0dfb6446206683440e35bb63fe2de.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    border: 15px ridge rgb(89, 20, 191);
+    position: relative;
+  
+   
+}
+
+.analog::before{
+    content: 'My Love';
+    color: blueviolet;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 25px;
+ 
+
+}
+
+
+
+.analog::after{
+    content: ' ';
+    background-color: blueviolet;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+   
+}
+
+.number{
+    --rotate:0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: black;
+    text-align: center;
+    font-size: 25px;
+    transform: rotate(var(--rotate));
+}
+
+
+.number-1{ --rotate:30deg;}
+.number-2{ --rotate:60deg;}
+.number-3{ --rotate:90deg;}
+.number-4{ --rotate:120deg;}
+.number-5{ --rotate:150deg;}
+.number-6{ --rotate:180deg;}
+.number-7{ --rotate:210deg;}
+.number-8{ --rotate:240deg;}
+.number-9{ --rotate:270deg;}
+.number-10{ --rotate:300deg;}
+.number-11{ --rotate:330deg;}
+.number-12{ --rotate:0deg;}
+
+
+.needle{
+    --rotation:0;
+    position:absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 10px;
+    height: 40%;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
+    
+    z-index: 8;
+    border: 1px solid black;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.hrs{
+    background-color: blueviolet;
+    width: 10px;
+    height: 25%;
+    
+}
+
+.mins{
+    background-color:blueviolet;
+    width: 7px;
+    height: 40%;
+}
+
+.sec{
+    background-color: rgb(0, 0, 0);
+    width: 3px;
+    height: 43%;
+}
